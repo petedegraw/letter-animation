@@ -1,0 +1,47 @@
+.letter {
+  position: relative;
+  width: 1000px;
+  height: 80vh;
+  perspective: 2000px;
+}
+
+.Content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vh;
+  z-index: 1;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 1.25rem;
+  overflow-y: scroll;
+}
+
+.Fold {
+  width: 100%;
+  z-index: 0;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+  background-color: white;
+
+  &.RoundedTop {
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+  }
+
+  &.RoundedBottom {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  &.First {
+    transform-origin: 50% 100%;
+  }
+
+  &.Middle {
+    transform-origin: 50% 0;
+  }
+
+  &.Last {
+    transform-origin: 50% 0;
+  }
+}
